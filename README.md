@@ -1,23 +1,28 @@
 # CRUD Post Application
 
-A simple and beginner-friendly CRUD application built using Node.js, Express.js, and EJS.
+A beginner-friendly CRUD application built using Node.js, Express.js, and EJS.
 
-This project was created to understand the fundamentals of backend development and how CRUD operations work in a real application. Users can create posts, view all posts, and open individual posts using dynamic routing.
+This project was created to understand the fundamentals of backend development and how CRUD operations work in a real application. Users can create posts, view posts, update existing posts, and delete posts using RESTful routes.
 
-The application follows RESTful routing principles and uses server-side rendering with EJS templates.
+The application uses server-side rendering with EJS templates and follows the MVC-style routing structure commonly used in backend applications.
 
+---
 
 # Features
 
 * Create new posts
 * View all posts
 * View individual posts
+* Edit and update posts
+* Delete posts
 * Dynamic routing using route parameters
 * RESTful routing structure
 * Server-side rendering with EJS
 * Unique ID generation using UUID
+* Method Override for PATCH and DELETE requests
 * Static file handling using Express
 
+---
 
 # Tech Stack
 
@@ -25,13 +30,16 @@ The application follows RESTful routing principles and uses server-side renderin
 * Express.js
 * EJS
 * UUID
+* Method-Override
 * HTML
 * CSS
 
+---
 
 # Project Structure
 
-RestAPI
+```bash id="ycdb56"
+project-folder
 │
 ├── public/
 │   └── style.css
@@ -39,48 +47,59 @@ RestAPI
 ├── views/
 │   ├── index.ejs
 │   ├── new.ejs
-│   └── show.ejs
+│   ├── show.ejs
+│   └── edit.ejs
 │
 ├── node_modules/
 ├── package.json
 ├── package-lock.json
 └── index.js
+```
 
+---
 
 # Routes
 
-| Method | Route      | Description                |
-| ------ | ---------- | -------------------------- |
-| GET    | /posts     | Display all posts          |
-| GET    | /posts/new | Show form to create a post |
-| POST   | /posts     | Create a new post          |
-| GET    | /posts/:id | Display a single post      |
+| Method | Route           | Description                    |
+| ------ | --------------- | ------------------------------ |
+| GET    | /posts          | Display all posts              |
+| GET    | /posts/new      | Show form to create a new post |
+| POST   | /posts          | Create a new post              |
+| GET    | /posts/:id      | Display a single post          |
+| GET    | /posts/:id/edit | Show edit form                 |
+| PATCH  | /posts/:id      | Update a post                  |
+| DELETE | /posts/:id      | Delete a post                  |
 
+---
 
 # Concepts Learned
 
 This project helped me understand:
 
 * CRUD operations
-* Express.js routing
-* Middleware usage
+* RESTful routing
+* Express.js middleware
 * Dynamic routes and route parameters
 * Handling form data
-* Server-side rendering
+* Server-side rendering using EJS
 * Static file serving
-* RESTful APIs
-* Project structure in Express applications
+* UUID generation
+* Method Override
+* Request and response handling
+* Basic backend project structure
 
+---
 
 # Future Improvements
 
-* Add update and delete functionality
-* Connect MongoDB database
+* Integrate SQL database for permanent data storage
+* Connect MySQL or PostgreSQL
 * Add authentication and authorization
-* Improve frontend design
-* Add validation and error handling
-* Build REST API version
+* Improve frontend UI
+* Add validations and error handling
+* Build complete REST API support
 
+---
 
 # Author
 
