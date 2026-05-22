@@ -26,13 +26,14 @@ The application uses server-side rendering with EJS templates and follows the MV
 
 # Tech Stack
 
-* Node.js
-* Express.js
-* EJS
-* UUID
-* Method-Override
-* HTML
-* CSS
+- JavaScript
+- Node.js
+- Express.js
+- EJS
+- UUID
+- Method-Override
+- HTML
+- CSS
 
 ---
 
